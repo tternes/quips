@@ -78,7 +78,9 @@ function generate_rss_document()
         $item->AddChild("title", $post->title);
         $item->AddChild("description", $post->description);
         $item->AddChild("pubDate", $post->date);
-        $item->AddChild("link");
+        
+        // TODO: until permalink support is added, provide a link to satisfy some rss consumers
+        $item->AddChild("link", $feed_settings["link"]);
         
         if(is_debug())
             $item->AddChild("path", $fullpath);
