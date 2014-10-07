@@ -132,7 +132,7 @@ function create_post_from_current_request()
     
     // write json file to /path/to/posts/YYYYMMDDhhmm.txt
     $path_posts = $feed_settings["paths"]["posts"];
-    $fullpath = $path_posts . "/" . date("YmdHis") . ".txt";
+    $fullpath = $path_posts . "/" . date("YmdHis") . ".json";
 
     print_r($fullpath);
     $fp = fopen($fullpath, "w") or die("unable to open output file");
