@@ -51,7 +51,7 @@ function is_debug()
 
 function generate_rss_document()
 {
-    header("Content-Type: application/rss+xml");
+    header("Content-Type: application/xml");
     
     $rss = new SimpleXMLElement('<rss/>');
     $rss->AddAttribute("version", "2.0");
